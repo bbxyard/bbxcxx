@@ -8,7 +8,7 @@
 #include "boost/algorithm/string.hpp"
 #include "boost/regex.hpp"
 #include "boost/tokenizer.hpp"
-
+#include "boost/format.hpp"
 
 namespace bbxyard {
 namespace bstring {
@@ -99,6 +99,11 @@ inline void test_tokenizer()
     std::cout << std::endl;
 }
 
+inline void test_format()
+{
+    std::cout << "Date: " << boost::format("%3%/%2%/%1%") % "2013" % "09" % "01" << std::endl;
+}
+
 class test
 {
 public:
@@ -112,6 +117,7 @@ public:
         test_split_join();
         test_regex();
         test_tokenizer();
+        test_format();
         return 0;
     }
 };
