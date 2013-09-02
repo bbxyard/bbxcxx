@@ -6,11 +6,15 @@
 #include <iostream>
 #include "test_bimap.hpp"
 #include "test_string.hpp"
+#include "test_autoptr.hpp"
 
 
 
 int main(int argc, char* argv[])
 {
+    // 2013.09.02
+    bbxyard::bautoptr::test::main(argc, argv);
+
     // 2013.09.01
     bbxyard::bstring::test::main(argc, argv);
 

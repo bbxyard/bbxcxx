@@ -343,6 +343,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\test_autoptr.hpp"
+			>
+		</File>
+		<File
 			RelativePath=".\test_bimap.hpp"
 			>
 		</File>
