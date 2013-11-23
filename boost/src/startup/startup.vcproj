@@ -351,6 +351,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\test_misc.hpp"
+			>
+		</File>
+		<File
 			RelativePath=".\test_string.hpp"
 			>
 		</File>
