@@ -62,6 +62,7 @@ inline void test_assign()
         std::cout << s << "\t";
     }
     std::cout << std::endl;
+    std::cout << "current function: " << BOOST_CURRENT_FUNCTION << std::endl;
 }
 
 class test

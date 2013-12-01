@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="startup"
-	ProjectGUID="{D5D5F5B3-B003-4B7C-9448-7CACFDADE1DD}"
-	RootNamespace="boost_study"
+	Name="boostpy"
+	ProjectGUID="{2F0A3C70-9460-41B5-B591-BBC967EFECF8}"
+	RootNamespace="boostpy"
 	Keyword="Win32Proj"
 	>
 	<Platforms>
@@ -20,10 +20,9 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)\..\~build\$(PlatformName)_output\$(ProjectName)_$(ConfigurationName)"
-			IntermediateDirectory="$(SolutionDir)\..\~build\$(PlatformName)_tmp\$(ProjectName)_$(ConfigurationName)"
-			ConfigurationType="1"
-			UseOfMFC="0"
+			OutputDirectory="$(SolutionDir)/../~build_$(PlatformName)/out/$(ProjectName)_$(ConfigurationName)"
+			IntermediateDirectory="$(SolutionDir)/../~build_$(PlatformName)/tmp/$(ProjectName)_$(ConfigurationName)"
+			ConfigurationType="2"
 			CharacterSet="0"
 			>
 			<Tool
@@ -31,8 +30,8 @@
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
-				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(SolutionPath)\..\bin\$(TargetFileName)&quot;&#x0D;&#x0A;"
-				Outputs="&quot;$(SolutionPath)\..\bin\$(TargetFileName)&quot;"
+				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)\..\bin\$(TargetFileName)&quot;&#x0D;&#x0A;copy &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(SolutionDir)\..\symbol\$(TargetName).pdb&quot;&#x0D;&#x0A;copy &quot;$(TargetPath)&quot; &quot;$(PYHOME)\$(TargetFileName)&quot;"
+				Outputs="&quot;$(SolutionDir)\..\bin\$(TargetFileName)&quot;;&quot;$(SolutionDir)\..\symbol\$(TargetName).pdb&quot;;&quot;$(PYHOME)\$(TargetFileName)&quot;"
 			/>
 			<Tool
 				Name="VCXMLDataGeneratorTool"
@@ -46,13 +45,14 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
+				AdditionalIncludeDirectories="&quot;$(SolutionDir)/../include&quot;;"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;BOOSTPY_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
-				Detect64BitPortabilityProblems="true"
+				Detect64BitPortabilityProblems="false"
 				DebugInformationFormat="4"
 			/>
 			<Tool
@@ -66,10 +66,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName)d.exe"
+				OutputFile="$(OutDir)\$(ProjectName).pyd"
 				LinkIncremental="2"
+				AdditionalLibraryDirectories="$(SolutionDir)\..\lib"
 				GenerateDebugInformation="true"
-				SubSystem="1"
+				SubSystem="2"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -99,10 +100,9 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|x64"
-			OutputDirectory="$(SolutionDir)\..\~build\$(PlatformName)_output\$(ProjectName)_$(ConfigurationName)"
-			IntermediateDirectory="$(SolutionDir)\..\~build\$(PlatformName)_tmp\$(ProjectName)_$(ConfigurationName)"
-			ConfigurationType="1"
-			UseOfMFC="0"
+			OutputDirectory="$(SolutionDir)/../~build_$(PlatformName)/out/$(ProjectName)_$(ConfigurationName)"
+			IntermediateDirectory="$(SolutionDir)/../~build_$(PlatformName)/tmp/$(ProjectName)_$(ConfigurationName)"
+			ConfigurationType="2"
 			CharacterSet="0"
 			>
 			<Tool
@@ -110,8 +110,8 @@
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
-				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)\..\bin64\$(TargetFileName)&quot;&#x0D;&#x0A;"
-				Outputs="&quot;$(SolutionDir)\..\bin64\$(TargetFileName)&quot;"
+				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)\..\bin64\$(TargetFileName)&quot;&#x0D;&#x0A;copy &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(SolutionDir)\..\symbol\$(TargetName).pdb&quot;&#x0D;&#x0A;copy &quot;$(TargetPath)&quot; &quot;$(PYHOME)\$(TargetFileName)&quot;&#x0D;&#x0A;"
+				Outputs="&quot;$(SolutionDir)\..\bin64\$(TargetFileName)&quot;;&quot;$(SolutionDir)\..\symbol\$(TargetName).pdb&quot;;&quot;$(PYHOME)\$(TargetFileName)&quot;"
 			/>
 			<Tool
 				Name="VCXMLDataGeneratorTool"
@@ -121,18 +121,18 @@
 			/>
 			<Tool
 				Name="VCMIDLTool"
-				TargetEnvironment="3"
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
+				AdditionalIncludeDirectories="&quot;$(SolutionDir)/../include&quot;;"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;BOOSTPY_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
-				Detect64BitPortabilityProblems="true"
+				Detect64BitPortabilityProblems="false"
 				DebugInformationFormat="3"
 			/>
 			<Tool
@@ -146,10 +146,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName)d.exe"
+				OutputFile="$(OutDir)\$(ProjectName).pyd"
 				LinkIncremental="2"
+				AdditionalLibraryDirectories="$(SolutionDir)\..\lib64"
 				GenerateDebugInformation="true"
-				SubSystem="1"
+				SubSystem="2"
 				TargetMachine="17"
 			/>
 			<Tool
@@ -179,10 +180,9 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)\..\~build\$(PlatformName)_output\$(ProjectName)_$(ConfigurationName)"
-			IntermediateDirectory="$(SolutionDir)\..\~build\$(PlatformName)_tmp\$(ProjectName)_$(ConfigurationName)"
-			ConfigurationType="1"
-			UseOfMFC="0"
+			OutputDirectory="$(SolutionDir)/../~build_$(PlatformName)/out/$(ProjectName)_$(ConfigurationName)"
+			IntermediateDirectory="$(SolutionDir)/../~build_$(PlatformName)/tmp/$(ProjectName)_$(ConfigurationName)"
+			ConfigurationType="2"
 			CharacterSet="0"
 			WholeProgramOptimization="1"
 			>
@@ -191,8 +191,8 @@
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
-				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(SolutionPath)\..\bin\$(TargetFileName)&quot;&#x0D;&#x0A;"
-				Outputs="&quot;$(SolutionPath)\..\bin\$(TargetFileName)&quot;"
+				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)\..\bin\$(TargetFileName)&quot;&#x0D;&#x0A;copy &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(SolutionDir)\..\symbol\$(TargetName).pdb&quot;&#x0D;&#x0A;copy &quot;$(TargetPath)&quot; &quot;$(PYHOME)\$(TargetFileName)&quot;"
+				Outputs="&quot;$(SolutionDir)\..\bin\$(TargetFileName)&quot;;&quot;$(SolutionDir)\..\symbol\$(TargetName).pdb&quot;;&quot;$(PYHOME)\$(TargetFileName)&quot;"
 			/>
 			<Tool
 				Name="VCXMLDataGeneratorTool"
@@ -205,11 +205,12 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
+				AdditionalIncludeDirectories="&quot;$(SolutionDir)/../include&quot;;"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;_RTLDLL;BOOSTPY_EXPORTS"
 				RuntimeLibrary="0"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
-				Detect64BitPortabilityProblems="true"
+				Detect64BitPortabilityProblems="false"
 				DebugInformationFormat="3"
 			/>
 			<Tool
@@ -223,9 +224,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				OutputFile="$(OutDir)\$(ProjectName).pyd"
 				LinkIncremental="1"
+				AdditionalLibraryDirectories="$(SolutionDir)\..\lib"
 				GenerateDebugInformation="true"
-				SubSystem="1"
+				SubSystem="2"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
 				TargetMachine="1"
@@ -257,10 +260,9 @@
 		</Configuration>
 		<Configuration
 			Name="Release|x64"
-			OutputDirectory="$(SolutionDir)\..\~build\$(PlatformName)_output\$(ProjectName)_$(ConfigurationName)"
-			IntermediateDirectory="$(SolutionDir)\..\~build\$(PlatformName)_tmp\$(ProjectName)_$(ConfigurationName)"
-			ConfigurationType="1"
-			UseOfMFC="0"
+			OutputDirectory="$(SolutionDir)/../~build_$(PlatformName)/out/$(ProjectName)_$(ConfigurationName)"
+			IntermediateDirectory="$(SolutionDir)/../~build_$(PlatformName)/tmp/$(ProjectName)_$(ConfigurationName)"
+			ConfigurationType="2"
 			CharacterSet="0"
 			WholeProgramOptimization="1"
 			>
@@ -269,8 +271,8 @@
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
-				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)\..\bin64\$(TargetFileName)&quot;&#x0D;&#x0A;"
-				Outputs="&quot;$(SolutionDir)\..\bin64\$(TargetFileName)&quot;"
+				CommandLine="copy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)\..\bin64\$(TargetFileName)&quot;&#x0D;&#x0A;copy &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(SolutionDir)\..\symbol\$(TargetName).pdb&quot;&#x0D;&#x0A;copy &quot;$(TargetPath)&quot; &quot;$(PYHOME)\$(TargetFileName)&quot;&#x0D;&#x0A;"
+				Outputs="&quot;$(SolutionDir)\..\bin64\$(TargetFileName)&quot;;&quot;$(SolutionDir)\..\symbol\$(TargetName).pdb&quot;;&quot;$(PYHOME)\$(TargetFileName)&quot;"
 			/>
 			<Tool
 				Name="VCXMLDataGeneratorTool"
@@ -280,15 +282,15 @@
 			/>
 			<Tool
 				Name="VCMIDLTool"
-				TargetEnvironment="3"
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
+				AdditionalIncludeDirectories="&quot;$(SolutionDir)/../include&quot;;"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;_RTLDLL;BOOSTPY_EXPORTS"
 				RuntimeLibrary="0"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
-				Detect64BitPortabilityProblems="true"
+				Detect64BitPortabilityProblems="false"
 				DebugInformationFormat="3"
 			/>
 			<Tool
@@ -302,9 +304,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				OutputFile="$(OutDir)\$(ProjectName).pyd"
 				LinkIncremental="1"
+				AdditionalLibraryDirectories="$(SolutionDir)\..\lib64"
 				GenerateDebugInformation="true"
-				SubSystem="1"
+				SubSystem="2"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
 				TargetMachine="17"
@@ -338,36 +342,8 @@
 	<References>
 	</References>
 	<Files>
-		<Filter
-			Name="addtions"
-			>
-			<File
-				RelativePath=".\test_python.cpp"
-				>
-			</File>
-		</Filter>
 		<File
-			RelativePath=".\main.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\test_autoptr.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\test_bimap.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\test_misc.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\test_python.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\test_string.hpp"
+			RelativePath=".\boostpy.cpp"
 			>
 		</File>
 	</Files>
