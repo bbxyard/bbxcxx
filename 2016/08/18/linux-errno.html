@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>linux-errno | Brian/XuBo/bbxyard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="错误码分布
+1-34     /usr/include/asm-generic/errno-base.h
+35-132   /usr/include/asm-generic/errno.h
+512-529  /usr/src/linux-headers-$(uname -r)/include/linux/errno.h (大号-内核级别，如系统调用等专用，用户程序一般不可见)
+
+123456789">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux-errno">
+<meta property="og:url" content="http://www.bbxyard.com/2016/08/18/linux-errno.html">
+<meta property="og:site_name" content="Brian/XuBo/bbxyard">
+<meta property="og:description" content="错误码分布
+1-34     /usr/include/asm-generic/errno-base.h
+35-132   /usr/include/asm-generic/errno.h
+512-529  /usr/src/linux-headers-$(uname -r)/include/linux/errno.h (大号-内核级别，如系统调用等专用，用户程序一般不可见)
+
+123456789">
+<meta property="og:updated_time" content="2016-08-18T07:37:34.228Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux-errno">
+<meta name="twitter:description" content="错误码分布
+1-34     /usr/include/asm-generic/errno-base.h
+35-132   /usr/include/asm-generic/errno.h
+512-529  /usr/src/linux-headers-$(uname -r)/include/linux/errno.h (大号-内核级别，如系统调用等专用，用户程序一般不可见)
+
+123456789">
+  
+    <link rel="alternative" href="/atom.xml" title="Brian/XuBo/bbxyard" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/hblog/css/style.css" type="text/css">
+  
+
+  <link rel="stylesheet" type="text/css" href="http://bbxyard.com/data/css/resume.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Brian/XuBo/bbxyard</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">since 1985</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.bbxyard.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="photo-linux-errno" class="article article-type-photo" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hblog/2016/08/18/linux-errno.html" class="article-date">
+  <time datetime="2016-08-18T07:00:00.000Z" itemprop="datePublished">2016-08-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux-errno
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="错误码分布">错误码分布</h2><ul>
+<li><strong>1-34</strong>     /usr/include/asm-generic/errno-base.h</li>
+<li><strong>35-132</strong>   /usr/include/asm-generic/errno.h</li>
+<li><strong>512-529</strong>  /usr/src/linux-headers-$(uname -r)/include/linux/errno.h (大号-内核级别，如系统调用等专用，用户程序一般不可见)</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * @file /usr/include/asm-generic/errno-base.h</span><br><span class="line"> * @desc 1-34</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * @file /usr/include/asm-generic/errno.h</span><br><span class="line"> * @desc 35-132</span><br><span class="line"> */</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="错误码">错误码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EPERM            <span class="number">1</span>      <span class="comment">/* Operation not permitted */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOENT           <span class="number">2</span>      <span class="comment">/* No such file or directory */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ESRCH            <span class="number">3</span>      <span class="comment">/* No such process */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EINTR            <span class="number">4</span>      <span class="comment">/* Interrupted system call */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EIO              <span class="number">5</span>      <span class="comment">/* I/O error */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENXIO            <span class="number">6</span>      <span class="comment">/* No such device or address */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> E2BIG            <span class="number">7</span>      <span class="comment">/* Argument list too long */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOEXEC          <span class="number">8</span>      <span class="comment">/* Exec format error */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EBADF            <span class="number">9</span>      <span class="comment">/* Bad file number */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ECHILD          <span class="number">10</span>      <span class="comment">/* No child processes */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EAGAIN          <span class="number">11</span>      <span class="comment">/* Try again */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOMEM          <span class="number">12</span>      <span class="comment">/* Out of memory */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EACCES          <span class="number">13</span>      <span class="comment">/* Permission denied */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EFAULT          <span class="number">14</span>      <span class="comment">/* Bad address */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOTBLK         <span class="number">15</span>      <span class="comment">/* Block device required */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EBUSY           <span class="number">16</span>      <span class="comment">/* Device or resource busy */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EEXIST          <span class="number">17</span>      <span class="comment">/* File exists */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EXDEV           <span class="number">18</span>      <span class="comment">/* Cross-device link */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENODEV          <span class="number">19</span>      <span class="comment">/* No such device */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOTDIR         <span class="number">20</span>      <span class="comment">/* Not a directory */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EISDIR          <span class="number">21</span>      <span class="comment">/* Is a directory */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EINVAL          <span class="number">22</span>      <span class="comment">/* Invalid argument */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENFILE          <span class="number">23</span>      <span class="comment">/* File table overflow */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EMFILE          <span class="number">24</span>      <span class="comment">/* Too many open files */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOTTY          <span class="number">25</span>      <span class="comment">/* Not a typewriter */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ETXTBSY         <span class="number">26</span>      <span class="comment">/* Text file busy */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EFBIG           <span class="number">27</span>      <span class="comment">/* File too large */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOSPC          <span class="number">28</span>      <span class="comment">/* No space left on device */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ESPIPE          <span class="number">29</span>      <span class="comment">/* Illegal seek */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EROFS           <span class="number">30</span>      <span class="comment">/* Read-only file system */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EMLINK          <span class="number">31</span>      <span class="comment">/* Too many links */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EPIPE           <span class="number">32</span>      <span class="comment">/* Broken pipe */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EDOM            <span class="number">33</span>      <span class="comment">/* Math argument out of domain of func */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ERANGE          <span class="number">34</span>      <span class="comment">/* Math result not representable */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EDEADLK         <span class="number">35</span>      <span class="comment">/* Resource deadlock would occur */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENAMETOOLONG    <span class="number">36</span>      <span class="comment">/* File name too long */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOLCK          <span class="number">37</span>      <span class="comment">/* No record locks available */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOSYS          <span class="number">38</span>      <span class="comment">/* Function not implemented */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOTEMPTY       <span class="number">39</span>      <span class="comment">/* Directory not empty */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ELOOP           <span class="number">40</span>      <span class="comment">/* Too many symbolic links encountered */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EWOULDBLOCK     EAGAIN  <span class="comment">/* Operation would block */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOMSG          <span class="number">42</span>      <span class="comment">/* No message of desired type */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EIDRM           <span class="number">43</span>      <span class="comment">/* Identifier removed */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ECHRNG          <span class="number">44</span>      <span class="comment">/* Channel number out of range */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EL2NSYNC        <span class="number">45</span>      <span class="comment">/* Level 2 not synchronized */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EL3HLT          <span class="number">46</span>      <span class="comment">/* Level 3 halted */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EL3RST          <span class="number">47</span>      <span class="comment">/* Level 3 reset */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ELNRNG          <span class="number">48</span>      <span class="comment">/* Link number out of range */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EUNATCH         <span class="number">49</span>      <span class="comment">/* Protocol driver not attached */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOCSI          <span class="number">50</span>      <span class="comment">/* No CSI structure available */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EL2HLT          <span class="number">51</span>      <span class="comment">/* Level 2 halted */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EBADE           <span class="number">52</span>      <span class="comment">/* Invalid exchange */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EBADR           <span class="number">53</span>      <span class="comment">/* Invalid request descriptor */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EXFULL          <span class="number">54</span>      <span class="comment">/* Exchange full */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOANO          <span class="number">55</span>      <span class="comment">/* No anode */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EBADRQC         <span class="number">56</span>      <span class="comment">/* Invalid request code */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EBADSLT         <span class="number">57</span>      <span class="comment">/* Invalid slot */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EDEADLOCK       EDEADLK</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EBFONT          <span class="number">59</span>      <span class="comment">/* Bad font file format */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOSTR          <span class="number">60</span>      <span class="comment">/* Device not a stream */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENODATA         <span class="number">61</span>      <span class="comment">/* No data available */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ETIME           <span class="number">62</span>      <span class="comment">/* Timer expired */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOSR           <span class="number">63</span>      <span class="comment">/* Out of streams resources */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENONET          <span class="number">64</span>      <span class="comment">/* Machine is not on the network */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOPKG          <span class="number">65</span>      <span class="comment">/* Package not installed */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EREMOTE         <span class="number">66</span>      <span class="comment">/* Object is remote */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOLINK         <span class="number">67</span>      <span class="comment">/* Link has been severed */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EADV            <span class="number">68</span>      <span class="comment">/* Advertise error */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ESRMNT          <span class="number">69</span>      <span class="comment">/* Srmount error */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ECOMM           <span class="number">70</span>      <span class="comment">/* Communication error on send */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EPROTO          <span class="number">71</span>      <span class="comment">/* Protocol error */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EMULTIHOP       <span class="number">72</span>      <span class="comment">/* Multihop attempted */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EDOTDOT         <span class="number">73</span>      <span class="comment">/* RFS specific error */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EBADMSG         <span class="number">74</span>      <span class="comment">/* Not a data message */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EOVERFLOW       <span class="number">75</span>      <span class="comment">/* Value too large for defined data type */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOTUNIQ        <span class="number">76</span>      <span class="comment">/* Name not unique on network */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EBADFD          <span class="number">77</span>      <span class="comment">/* File descriptor in bad state */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EREMCHG         <span class="number">78</span>      <span class="comment">/* Remote address changed */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ELIBACC         <span class="number">79</span>      <span class="comment">/* Can not access a needed shared library */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ELIBBAD         <span class="number">80</span>      <span class="comment">/* Accessing a corrupted shared library */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ELIBSCN         <span class="number">81</span>      <span class="comment">/* .lib section in a.out corrupted */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ELIBMAX         <span class="number">82</span>      <span class="comment">/* Attempting to link in too many shared libraries */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ELIBEXEC        <span class="number">83</span>      <span class="comment">/* Cannot exec a shared library directly */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EILSEQ          <span class="number">84</span>      <span class="comment">/* Illegal byte sequence */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ERESTART        <span class="number">85</span>      <span class="comment">/* Interrupted system call should be restarted */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ESTRPIPE        <span class="number">86</span>      <span class="comment">/* Streams pipe error */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EUSERS          <span class="number">87</span>      <span class="comment">/* Too many users */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOTSOCK        <span class="number">88</span>      <span class="comment">/* Socket operation on non-socket */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EDESTADDRREQ    <span class="number">89</span>      <span class="comment">/* Destination address required */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EMSGSIZE        <span class="number">90</span>      <span class="comment">/* Message too long */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EPROTOTYPE      <span class="number">91</span>      <span class="comment">/* Protocol wrong type for socket */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOPROTOOPT     <span class="number">92</span>      <span class="comment">/* Protocol not available */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EPROTONOSUPPORT <span class="number">93</span>      <span class="comment">/* Protocol not supported */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ESOCKTNOSUPPORT <span class="number">94</span>      <span class="comment">/* Socket type not supported */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EOPNOTSUPP      <span class="number">95</span>      <span class="comment">/* Operation not supported on transport endpoint */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EPFNOSUPPORT    <span class="number">96</span>      <span class="comment">/* Protocol family not supported */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EAFNOSUPPORT    <span class="number">97</span>      <span class="comment">/* Address family not supported by protocol */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EADDRINUSE      <span class="number">98</span>      <span class="comment">/* Address already in use */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EADDRNOTAVAIL   <span class="number">99</span>      <span class="comment">/* Cannot assign requested address */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENETDOWN        <span class="number">100</span>     <span class="comment">/* Network is down */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENETUNREACH     <span class="number">101</span>     <span class="comment">/* Network is unreachable */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENETRESET       <span class="number">102</span>     <span class="comment">/* Network dropped connection because of reset */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ECONNABORTED    <span class="number">103</span>     <span class="comment">/* Software caused connection abort */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ECONNRESET      <span class="number">104</span>     <span class="comment">/* Connection reset by peer */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOBUFS         <span class="number">105</span>     <span class="comment">/* No buffer space available */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EISCONN         <span class="number">106</span>     <span class="comment">/* Transport endpoint is already connected */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOTCONN        <span class="number">107</span>     <span class="comment">/* Transport endpoint is not connected */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ESHUTDOWN       <span class="number">108</span>     <span class="comment">/* Cannot send after transport endpoint shutdown */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ETOOMANYREFS    <span class="number">109</span>     <span class="comment">/* Too many references: cannot splice */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ETIMEDOUT       <span class="number">110</span>     <span class="comment">/* Connection timed out */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ECONNREFUSED    <span class="number">111</span>     <span class="comment">/* Connection refused */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EHOSTDOWN       <span class="number">112</span>     <span class="comment">/* Host is down */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EHOSTUNREACH    <span class="number">113</span>     <span class="comment">/* No route to host */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EALREADY        <span class="number">114</span>     <span class="comment">/* Operation already in progress */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EINPROGRESS     <span class="number">115</span>     <span class="comment">/* Operation now in progress */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ESTALE          <span class="number">116</span>     <span class="comment">/* Stale file handle */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EUCLEAN         <span class="number">117</span>     <span class="comment">/* Structure needs cleaning */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOTNAM         <span class="number">118</span>     <span class="comment">/* Not a XENIX named type file */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENAVAIL         <span class="number">119</span>     <span class="comment">/* No XENIX semaphores available */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EISNAM          <span class="number">120</span>     <span class="comment">/* Is a named type file */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EREMOTEIO       <span class="number">121</span>     <span class="comment">/* Remote I/O error */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EDQUOT          <span class="number">122</span>     <span class="comment">/* Quota exceeded */</span></span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOMEDIUM       <span class="number">123</span>     <span class="comment">/* No medium found */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EMEDIUMTYPE     <span class="number">124</span>     <span class="comment">/* Wrong medium type */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ECANCELED       <span class="number">125</span>     <span class="comment">/* Operation Canceled */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOKEY          <span class="number">126</span>     <span class="comment">/* Required key not available */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EKEYEXPIRED     <span class="number">127</span>     <span class="comment">/* Key has expired */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EKEYREVOKED     <span class="number">128</span>     <span class="comment">/* Key has been revoked */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EKEYREJECTED    <span class="number">129</span>     <span class="comment">/* Key was rejected by service */</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* for robust mutexes */</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EOWNERDEAD      <span class="number">130</span>     <span class="comment">/* Owner died */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOTRECOVERABLE <span class="number">131</span>     <span class="comment">/* State not recoverable */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ERFKILL         <span class="number">132</span>     <span class="comment">/* Operation not possible due to RF-kill */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EHWPOISON       <span class="number">133</span>     <span class="comment">/* Memory page has hardware error */</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * These should never be seen by user programs.  To return one of ERESTART*</span><br><span class="line"> * codes, signal_pending() MUST be set.  Note that ptrace can observe these</span><br><span class="line"> * at syscall exit tracing, but they will never be left for the debugged user</span><br><span class="line"> * process to see.</span><br><span class="line"> */</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ERESTARTSYS     <span class="number">512</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ERESTARTNOINTR  <span class="number">513</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ERESTARTNOHAND  <span class="number">514</span>     <span class="comment">/* restart if no handler.. */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOIOCTLCMD     <span class="number">515</span>     <span class="comment">/* No ioctl command */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ERESTART_RESTARTBLOCK <span class="number">516</span> <span class="comment">/* restart by calling sys_restart_syscall */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EPROBE_DEFER    <span class="number">517</span>     <span class="comment">/* Driver requests probe retry */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EOPENSTALE      <span class="number">518</span>     <span class="comment">/* open found a stale dentry */</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Defined for the NFSv3 protocol */</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EBADHANDLE      <span class="number">521</span>     <span class="comment">/* Illegal NFS file handle */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOTSYNC        <span class="number">522</span>     <span class="comment">/* Update synchronization mismatch */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EBADCOOKIE      <span class="number">523</span>     <span class="comment">/* Cookie is stale */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ENOTSUPP        <span class="number">524</span>     <span class="comment">/* Operation is not supported */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ETOOSMALL       <span class="number">525</span>     <span class="comment">/* Buffer or request is too small */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> ESERVERFAULT    <span class="number">526</span>     <span class="comment">/* An untranslatable error occurred */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EBADTYPE        <span class="number">527</span>     <span class="comment">/* Type not supported by server */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EJUKEBOX        <span class="number">528</span>     <span class="comment">/* Request initiated, but will not complete before timeout */</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> EIOCBQUEUED     <span class="number">529</span>     <span class="comment">/* iocb queued, will get completion event */</span></span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.bbxyard.com/2016/08/18/linux-errno.html" data-id="cis06a9ra000gzlt1we2fh72z" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hblog/tags/c/">c</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hblog/tags/c/">c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hblog/tags/linux/">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/hblog/2016/08/16/design-pattern.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">设计模式-参考手册</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/hblog/tags/bash/">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hblog/tags/c/">c</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hblog/tags/c/">c++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hblog/tags/design/">design</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hblog/tags/linux/">linux</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hblog/tags/shell/">shell</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/hblog/tags/bash/" style="font-size: 10px;">bash</a> <a href="/hblog/tags/c/" style="font-size: 15px;">c</a> <a href="/hblog/tags/c/" style="font-size: 15px;">c++</a> <a href="/hblog/tags/design/" style="font-size: 10px;">design</a> <a href="/hblog/tags/linux/" style="font-size: 20px;">linux</a> <a href="/hblog/tags/shell/" style="font-size: 10px;">shell</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hblog/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hblog/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hblog/archives/2016/01/">January 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hblog/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hblog/2016/08/18/linux-errno.html">linux-errno</a>
+          </li>
+        
+          <li>
+            <a href="/hblog/2016/08/16/design-pattern.html">设计模式-参考手册</a>
+          </li>
+        
+          <li>
+            <a href="/hblog/2016/02/29/resume.html">我的简历</a>
+          </li>
+        
+          <li>
+            <a href="/hblog/2016/01/11/hello-world.html">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/hblog/2016/01/11/linux-c.html">linux c</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 boxu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/hblog/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/hblog/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/hblog/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

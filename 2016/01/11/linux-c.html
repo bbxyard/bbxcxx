@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>linux c | Brian/XuBo/bbxyard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="守护进程123456789101112131415161718192021222324252627pid_t pid = fork();if (pid &amp;lt; 0)&amp;#123;       fprintf(stderr, &quot;fork sub process failed!!\n&quot;);    return -2;&amp;#125;   else if (pid &amp;gt; 0)&amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux c">
+<meta property="og:url" content="http://www.bbxyard.com/2016/01/11/linux-c.html">
+<meta property="og:site_name" content="Brian/XuBo/bbxyard">
+<meta property="og:description" content="守护进程123456789101112131415161718192021222324252627pid_t pid = fork();if (pid &amp;lt; 0)&amp;#123;       fprintf(stderr, &quot;fork sub process failed!!\n&quot;);    return -2;&amp;#125;   else if (pid &amp;gt; 0)&amp;#123;">
+<meta property="og:updated_time" content="2016-08-18T07:02:22.371Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux c">
+<meta name="twitter:description" content="守护进程123456789101112131415161718192021222324252627pid_t pid = fork();if (pid &amp;lt; 0)&amp;#123;       fprintf(stderr, &quot;fork sub process failed!!\n&quot;);    return -2;&amp;#125;   else if (pid &amp;gt; 0)&amp;#123;">
+  
+    <link rel="alternative" href="/atom.xml" title="Brian/XuBo/bbxyard" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/hblog/css/style.css" type="text/css">
+  
+
+  <link rel="stylesheet" type="text/css" href="http://bbxyard.com/data/css/resume.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Brian/XuBo/bbxyard</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">since 1985</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.bbxyard.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="photo-linux-c" class="article article-type-photo" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hblog/2016/01/11/linux-c.html" class="article-date">
+  <time datetime="2016-01-11T12:00:00.000Z" itemprop="datePublished">2016-01-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux c
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="守护进程"><strong>守护进程</strong></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pid_t</span> pid = fork();</span><br><span class="line"><span class="keyword">if</span> (pid &lt; <span class="number">0</span>)</span><br><span class="line">&#123;   </span><br><span class="line">    <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"fork sub process failed!!\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">2</span>;</span><br><span class="line">&#125;   </span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (pid &gt; <span class="number">0</span>)</span><br><span class="line">&#123;   </span><br><span class="line">     <span class="built_in">fprintf</span>(<span class="built_in">stdout</span>, <span class="string">"daemon sub process %d\n"</span>, pid);</span><br><span class="line">     <span class="built_in">fprintf</span>(<span class="built_in">stdout</span>, <span class="string">"logfile %s\n"</span>, logfile);</span><br><span class="line">     <span class="built_in">exit</span>(<span class="number">0</span>); <span class="comment">// exit this processs [parent/current]</span></span><br><span class="line">&#125;   </span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;   </span><br><span class="line">     setsid(); <span class="comment">// net session and new leader.</span></span><br><span class="line">     my::close_non_std_open_fds();  <span class="comment">// close 0,1,2 --</span></span><br><span class="line">     my::close_std_open_fds();      <span class="comment">// close all file handle</span></span><br><span class="line">     <span class="comment">// sub process run</span></span><br><span class="line">     ret = svc.start(workdir);</span><br><span class="line">     <span class="keyword">char</span> result[<span class="number">2</span> * <span class="number">1024</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">     <span class="built_in">sprintf</span>(result, <span class="string">"xx_daemon: workdir=%s, status=%d, pid=%d!\n"</span>, workdir, ret, getpid());</span><br><span class="line">     syslog(LOG_INFO, result);</span><br><span class="line">     <span class="comment">// wait to exit!</span></span><br><span class="line">     my::thr_sem exit_sem;</span><br><span class="line">     exit_sem.wait(); <span class="comment">// no need to exit as a daemon.</span></span><br><span class="line">     svc.stop();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="new"><strong>new</strong></h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.bbxyard.com/2016/01/11/linux-c.html" data-id="cis06a9re000kzlt1fgegwyqn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hblog/tags/c/">c</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hblog/tags/c/">c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hblog/tags/linux/">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/hblog/2016/01/11/hello-world.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/hblog/2015/12/21/shell.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">shell skills</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/hblog/tags/bash/">bash</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hblog/tags/c/">c</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hblog/tags/c/">c++</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hblog/tags/design/">design</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hblog/tags/linux/">linux</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hblog/tags/shell/">shell</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/hblog/tags/bash/" style="font-size: 10px;">bash</a> <a href="/hblog/tags/c/" style="font-size: 15px;">c</a> <a href="/hblog/tags/c/" style="font-size: 15px;">c++</a> <a href="/hblog/tags/design/" style="font-size: 10px;">design</a> <a href="/hblog/tags/linux/" style="font-size: 20px;">linux</a> <a href="/hblog/tags/shell/" style="font-size: 10px;">shell</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hblog/archives/2016/08/">August 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hblog/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hblog/archives/2016/01/">January 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hblog/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hblog/2016/08/18/linux-errno.html">linux-errno</a>
+          </li>
+        
+          <li>
+            <a href="/hblog/2016/08/16/design-pattern.html">设计模式-参考手册</a>
+          </li>
+        
+          <li>
+            <a href="/hblog/2016/02/29/resume.html">我的简历</a>
+          </li>
+        
+          <li>
+            <a href="/hblog/2016/01/11/hello-world.html">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/hblog/2016/01/11/linux-c.html">linux c</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 boxu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/hblog/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/hblog/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/hblog/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
